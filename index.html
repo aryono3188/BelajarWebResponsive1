@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Haryono Haryono</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+
+    <!-- sidebar -->
+    <input type="checkbox" id="check">
+    <div class="sidebar">
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skill</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- bagian header -->
+
+    <header>
+        <div class="container">
+            <img src="img/santuy coy.jpg">
+            <h1>
+                <a href=""> welcome</a>
+            </h1>
+            <h2>
+                <a href=""> haryono haryono</a>
+            </h2>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skill</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- menu mobile -->
+            <label for="check" class="mobile-menu">Menu</label>
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="container">
+            <div class="banner-left">
+                <img src="img/ki joko pintar.jpg">
+                <h2>
+                    Hello ....<br>
+                    Saya adalah seorang <span class="efek-ngetik"></span>
+                </h2>
+                <p>Selamat datang di belajar website responsive</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- bagian footer -->
+    <footer>
+        <div class="container">
+            <small>Copyright &copy; September 2022 - Haryono Haryono.</small>
+            <br>
+            <p id="demo"></p>
+            <script>
+                var d = Date();
+                document.getElementById("demo").innerHTML = d;
+            </script>
+            <script>
+                date = new Date();
+                millisecond = date.getMilliseconds();
+                detik = date.getSeconds();
+                menit = date.getMinutes();
+                jam = date.getHours();
+                arrhari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+                hari = date.getDay();
+                tanggal = date.getDate();
+                arrbulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+                bulan = date.getMonth();
+                tahun = date.getFullYear();
+                document.write(arrhari[hari] + "," + tanggal + "-" + arrbulan[bulan] + "-" + tahun + ". " + jam + " : " + menit + " : " + detik + "." + millisecond);
+            </script>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

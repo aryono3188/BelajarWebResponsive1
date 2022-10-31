@@ -1,0 +1,252 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: #333;
+}
+
+/*untuk header*/
+header {
+    height: 70px;
+    /* border: 1px solid; */
+}
+
+header img {
+    width: 50px;
+    float: left;
+    /*Memposisikan gambar ke kiri*/
+    border-radius: 7px;
+    /* untuk foto kelihatan bulat*/
+    margin-top: 10px;
+}
+
+header h1 {
+    display: none;
+}
+
+header h2 {
+    /*border: 1px solid;*/
+    /*Memposisikan text dalam kotak*/
+    display: inline-block;
+    /*Memposisikan text dalam satu baris sejajar*/
+    /*float: left;*/
+    padding: 15.5px 24px;
+    /*Memposisikan text atas, bawah, kiri, kanan di border*/
+    text-transform: uppercase;
+    /*Membuat huruf jadi besar semua*/
+}
+
+/*Membuat text disentuh berwarna gunakan hover*/
+header h2 a:hover {
+    color: #F84744;
+}
+
+/*waktu pemindahan warna text*/
+header h2 a {
+    transition: .3s;
+}
+
+/*Header Menu untuk text*/
+header ul {
+    /* border: 1px solid; */
+    float: right;
+    /*Memposisikan text ke kanan*/
+}
+
+header ul li {
+    /* border: 1px solid; */
+    padding: 24px;
+    display: inline-block;
+    /*Memposisikan text dalam satu baris sejajar*/
+}
+
+/* untuk perpindahan warna text */
+header ul li a:hover {
+    color: #F84744;
+}
+
+header ul li a {
+    transition: .3s;
+}
+
+/*Menghilangkan garis di bawah text*/
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    /* border: 1px solid; */
+}
+
+/* menghapus/ mengakali float agar containernya mengikuti isinya*/
+.container::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.mobile-menu {
+    float: right;
+    display: none;
+    /*Menghilangkan tulisan menu*/
+    padding: 22px;
+}
+
+.mobile-menu:hover {
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -300px;
+    width: 300px;
+    background-color: rgba(16, 47, 80, .9);
+    transition: .3s;
+    z-index: 99999;
+}
+
+.sidebar ul li a {
+    color: #fff;
+}
+
+.sidebar ul li {
+    padding: 24px;
+    transition: .3s;
+    transition-property: background-color;
+}
+
+.sidebar ul li:hover {
+    background-color: #F84744;
+}
+
+#check:checked~.sidebar {
+    left: 0;
+}
+
+
+section h3 {
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 20px;
+    position: relative;
+}
+
+section h3::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    height: 1px;
+    background-color: #ddd;
+    left: calc(50% - 60px);
+}
+
+section h3::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    width: 40px;
+    height: 4px;
+    background-color: #F84744;
+    left: calc(50% - 20px);
+}
+
+#skills {
+    background-color: #f9f9f9;
+}
+
+#skills .bar {
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 5px 0 20px 0;
+}
+
+.bar .nilai {
+    height: 30px;
+    background-color: #F84744;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+}
+
+.html {
+    width: 85%;
+}
+
+.css {
+    width: 90%;
+}
+
+.js {
+    width: 75%;
+}
+
+.php {
+    width: 60%;
+}
+
+.ps {
+    width: 90%;
+}
+
+footer {
+    background-color: rgb(238, 158, 202);
+    padding: 40px;
+    text-align: center;
+}
+
+footer small {
+    color: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*Menampilkan tulisan menu*/
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: block;
+    }
+
+    /*Menghilangkan daftar menu*/
+    header ul {
+        display: none;
+    }
+
+    header h1 {
+        display: block;
+        text-transform: uppercase;
+        margin-left: 90px;
+        margin-top: 15px;
+        display: inline-block;
+    }
+
+    header h1 a:hover {
+        color: #F84744;
+    }
+
+    /*waktu pemindahan warna text*/
+    header h1 a {
+        transition: .3s;
+    }
+
+    header h2 {
+        display: none;
+    }
+
+    .container p {
+        font-size: 13px;
+    }
+}
